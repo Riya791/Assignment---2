@@ -12,7 +12,7 @@ class Email(BaseModel):
 
 
 def send_email(body, email: Email):
-    sender_email =os.environ.get("sender_email")
+    sender_email = os.environ.get("sender_email")
     sender_password = os.environ.get("sender_password")
     receiver_email = email.rec_email
 
