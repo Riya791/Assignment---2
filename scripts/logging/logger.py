@@ -9,7 +9,7 @@ def getLogger():
     formatter = logging.Formatter(
         '%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(funcName)s - %(message)s')
 
-    file_handler = logging.FileHandler('logs/app.log')
+    file_handler = logging.FileHandler('logs/pythonProject9_22052023.log')
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     __logger__.addHandler(file_handler)

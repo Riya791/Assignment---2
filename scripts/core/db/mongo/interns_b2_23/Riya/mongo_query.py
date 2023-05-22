@@ -27,8 +27,8 @@ def read_item():
     except Exception as e:
         logger.error(Mongo_queryException.EX0015.format(error=str(e)))
     return {
-        "db": data
-    }
+            "db": data
+        }
 
 
 def create_item(item: Item):
