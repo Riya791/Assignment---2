@@ -1,3 +1,4 @@
+"""This is the model containing classes"""
 from pydantic import BaseModel
 
 
@@ -6,3 +7,9 @@ class Item(BaseModel):
     name: str
     quantity: int
     cost: int
+
+
+class Email(BaseModel):
+    rec_email: str
+    subject: str
+    body: str

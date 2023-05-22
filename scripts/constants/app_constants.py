@@ -1,3 +1,6 @@
+"""Classes for handling constants"""
+
+
 class APis:
     # create_api = '/create'
     view_all_items_api = '/view_all_data'

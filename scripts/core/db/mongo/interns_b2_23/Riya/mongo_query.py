@@ -1,14 +1,12 @@
+"""Importing MongoClient for connection"""
 from fastapi import FastAPI
-from pydantic import BaseModel
-from pymongo import MongoClient  # import mongo client to connect
+from pymongo import MongoClient
 from scripts.constants.app_constants import DBConstants
 from scripts.core.schema.model import Item
+from scripts.exceptions.exception_codes import Mongo_queryException
+from scripts.logging.logger import logger
 
 app = FastAPI()
-
-# Creating instance of mongo client
-# client = MongoClient("mongodb://intern_23:intern%40123@192.168.0.220:2717/interns_b2_23")
-# Creating database
 client = MongoClient(DBConstants.DB_URI)
 db = client[DBConstants.DB_DATABASE]
 # # Creating document
@@ -19,33 +17,56 @@ billing = db[DBConstants.DB_COLLECTION]
 
 
 def read_item():
+    """Function to read items"""
+    logger.info("mongo_query:read_item")
     data = []
-
-    for items in billing.find():
-        del items['_id']
-        data.append(items)
-
+    try:
+        for items in billing.find():
+            del items['_id']
+            data.append(items)
+    except Exception as e:
+        logger.error(Mongo_queryException.EX0015.format(error=str(e)))
     return {
         "db": data
     }
 
 
 def create_item(item: Item):
-    billing.insert_one(item.dict())
-    db[item.id] = item.name
+    """Function to create item"""
+    try:
+        logger.info("mongo_query:create_item")
+        billing.insert_one(item.dict())
+        db[item.id] = item.name
+    except Exception as e:
+        logger.error(Mongo_queryException.EX0016.format(error=str(e)))
     return {
         "db": db
     }
 
 
 def update_item(item_id: int, item: Item):
-    billing.update_one({"id": item_id}, {"$set": item.dict()})
+    """Function to update item"""
+    try:
+        logger.info("mongo_query:update_item")
+        billing.update_one({"id": item_id}, {"$set": item.dict()})
+    except Exception as e:
+        logger.error(Mongo_queryException.EX0017.format(error=str(e)))
 
 
 def delete_item(item_id: int):
-    billing.delete_one({"id": item_id})
+    """Function to delete item"""
+    try:
+        logger.info("mongo_query:delete_item")
+        billing.delete_one({"id": item_id})
+    except Exception as e:
+        logger.error(Mongo_queryException.EX0018.format(error=str(e)))
     return {"message": "deleted"}
 
 
 def pipeline_aggregation(pipeline: list):
+    """Function for aggregation"""
+    try:
+        logger.info("mongo_query:pipeline_aggregation")
+    except Exception as e:
+        logger.error(Mongo_queryException.EX0019.format(error=str(e)))
     return billing.aggregate(pipeline)

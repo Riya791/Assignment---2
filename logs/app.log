@@ -1,0 +1,30 @@
+2023-05-22 11:53:11,050 - INFO - billing_services.py:59 - send_item - services:send_items
+2023-05-22 11:53:11,054 - INFO - billing_handler.py:62 - pipeline_aggregation - Handler:pipeline_aggregation
+2023-05-22 11:53:11,055 - INFO - mongo_query.py:63 - pipeline_aggregation - mongo_query:pipeline_aggregation
+2023-05-22 11:53:11,099 - INFO - Email_handlers.py:23 - send_email - Handlers:send_email
+2023-05-22 11:53:13,715 - INFO - Email_handlers.py:31 - send_email - send_email:Email sent successfully
+2023-05-22 12:21:08,554 - INFO - billing_services.py:29 - create_item - services:create_items
+2023-05-22 12:21:08,558 - INFO - billing_handler.py:34 - create_data - Handler:create_data
+2023-05-22 12:22:18,646 - INFO - billing_services.py:41 - update_item - services:update_items
+2023-05-22 12:22:18,649 - INFO - billing_handler.py:46 - update_data - Handler:update_data
+2023-05-22 12:22:18,714 - INFO - billing_handler.py:49 - update_data - update_data:Updated successfully
+2023-05-22 12:23:18,336 - INFO - billing_services.py:65 - send_item - services:send_items
+2023-05-22 12:23:18,338 - INFO - billing_handler.py:70 - pipeline_aggregation - Handler:pipeline_aggregation
+2023-05-22 12:23:18,338 - INFO - mongo_query.py:69 - pipeline_aggregation - mongo_query:pipeline_aggregation
+2023-05-22 12:23:18,458 - INFO - Email_handlers.py:25 - send_email - Handlers:send_email
+2023-05-22 12:23:21,297 - INFO - Email_handlers.py:33 - send_email - send_email:Email sent successfully
+2023-05-22 12:24:06,749 - INFO - billing_services.py:80 - get_billing - services:get_billing
+2023-05-22 12:24:06,751 - INFO - billing_handler.py:70 - pipeline_aggregation - Handler:pipeline_aggregation
+2023-05-22 12:24:06,751 - INFO - mongo_query.py:69 - pipeline_aggregation - mongo_query:pipeline_aggregation
+2023-05-22 12:24:23,207 - INFO - billing_services.py:17 - view_all_items - services:view_all_items
+2023-05-22 12:24:23,208 - INFO - billing_handler.py:22 - read_data - Handler:read_data
+2023-05-22 12:25:02,604 - INFO - billing_services.py:29 - create_item - services:create_items
+2023-05-22 12:25:02,605 - INFO - billing_handler.py:34 - create_data - Handler:create_data
+2023-05-22 12:27:23,935 - INFO - billing_services.py:17 - view_all_items - services:view_all_items
+2023-05-22 12:27:23,936 - INFO - billing_handler.py:22 - read_data - Handler:read_data
+2023-05-22 12:34:02,870 - INFO - billing_services.py:29 - create_item - services:create_item
+2023-05-22 12:34:02,876 - INFO - billing_handler.py:34 - create_data - Handler:create_data
+2023-05-22 12:34:02,939 - INFO - billing_handler.py:37 - create_data - create_data:record created successfully
+2023-05-22 12:34:54,971 - INFO - billing_services.py:40 - update_item - services:update_item
+2023-05-22 12:34:54,973 - INFO - billing_handler.py:46 - update_data - Handler:update_data
+2023-05-22 12:34:55,014 - INFO - billing_handler.py:49 - update_data - update_data:Updated successfully

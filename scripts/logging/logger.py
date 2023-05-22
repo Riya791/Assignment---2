@@ -1,4 +1,6 @@
+"""Importing logging"""
 import logging
+
 
 def getLogger():
     __logger__ = logging.getLogger("")
